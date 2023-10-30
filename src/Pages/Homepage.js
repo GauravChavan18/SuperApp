@@ -6,6 +6,7 @@ import NewsCard from "../Components/NewsCard";
 import NotesDiv from "../Components/NotesDiv";
 import { useNavigate } from "react-router-dom";
 import Timer from "../Components/Timer";
+
 const HomePage = () => {
   const navigate = useNavigate();
   function buttonclickhandler() {
