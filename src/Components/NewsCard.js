@@ -31,11 +31,11 @@ const NewsCard = () => {
       const response = await fetch(url);
       const data = await response.json();
       const articles = await data.articles;
-      setdata(...sdata, articles);
+      setdata(articles);
     } catch (error) {
       console.error(error);
     }
-  }, [url, sdata, setdata]);
+  }, [url, setdata]);
 
   useEffect(() => {
     fetchData();
