@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./NewsCard.css";
 const NewsCard = () => {
   const [randomnews, setrandomnews] = useState(0);
@@ -9,7 +9,7 @@ const NewsCard = () => {
     "country=us&" +
     "apiKey=c88136c8d6684baba4ff546228218d1b";
 
-  function getCurrentDate() {
+  const getCurrentDate = useCallback(() => {
     let newDate = new Date();
     let day = newDate.getDate();
     let year = newDate.getFullYear();
@@ -25,24 +25,24 @@ const NewsCard = () => {
     var strTime = hours + ":" + minutes + " " + ampm;
     let arr = [date, strTime];
     setdated(arr);
-  }
-  async function fetchData() {
+  }, []);
+  const fetchData = useCallback(async () => {
     try {
       const response = await fetch(url);
       const data = await response.json();
       const articles = await data.articles;
-      setdata(articles);
+      setdata(...sdata, articles);
     } catch (error) {
       console.error(error);
     }
-  }
+  }, [url, sdata, setdata]);
 
   useEffect(() => {
     fetchData();
     getCurrentDate();
     let num = Math.floor(Math.random() * 20);
     setrandomnews(num);
-  }, []);
+  }, [fetchData, getCurrentDate]);
 
   return (
     <div className="NewsCardDiv">
