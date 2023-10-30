@@ -5,7 +5,7 @@ import WeatherCard from "./WeatherCard";
 const WeatherDateCard = () => {
   const [weatherdata, setweatherdata] = useState(null);
   let url =
-    "http://api.weatherapi.com/v1/forecast.json?key=83563ae7d5f14070b8e203915231910&q=mumbai&days=1&aqi=yes&alerts=yes";
+    "https://api.weatherapi.com/v1/forecast.json?key=83563ae7d5f14070b8e203915231910&q=mumbai&days=1&aqi=yes&alerts=yes";
 
   const fetchData = useCallback(async () => {
     try {
