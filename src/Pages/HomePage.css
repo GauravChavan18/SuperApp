@@ -1,0 +1,77 @@
+.MainBody {
+  background-color: black;
+  height: 100vh;
+  margin: auto;
+  padding-top: 40px;
+  overflow-y: hidden;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.MainContent {
+  width: 75%;
+  /* background-color: aqua; */
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.MainLeftDiv {
+  width: 80%;
+  height: 100%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+.topDiv {
+  width: 100%;
+  /* background-color: chartreuse; */
+  height: 67%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.topleftdiv {
+  width: 57%;
+  height: 100%;
+  /* background-color: chocolate; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.BottomDiv {
+  width: 100%;
+  background-color: #1e2343;
+  height: 30%;
+  border-radius: 20px;
+}
+.notesdiv {
+  width: 38%;
+  height: 100%;
+  background-color: #f1c75b;
+  border-radius: 20px;
+}
+.NewsCard {
+  width: 35%;
+  height: 100%;
+  background-color: black;
+}
+
+.browsebutton {
+  position: absolute;
+  bottom: 15px;
+  right: 220px;
+  width: 120px;
+  height: 40px;
+  color: white;
+  background-color: rgb(20, 138, 8);
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}

@@ -19,7 +19,7 @@ const Timer = () => {
     }
   }
   function hrdeschandler() {
-    if (hourtime == 0) {
+    if (hourtime === 0) {
       sethourtime(0);
     } else if (hourtime <= 10) {
       sethourtime(parseInt(hourtime) - 1);
@@ -28,7 +28,7 @@ const Timer = () => {
     }
   }
   function mindeschandler() {
-    if (mintime == 0) {
+    if (mintime === 0) {
       setmintime(0);
     } else if (mintime <= 10) {
       setmintime(parseInt(mintime) - 1);
@@ -44,7 +44,7 @@ const Timer = () => {
     }
   }
   function secdeschandler() {
-    if (sectime == 0) {
+    if (sectime === 0) {
       setsectime(0);
     } else if (sectime <= 10) {
       setsectime(parseInt(sectime) - 1);
@@ -107,23 +107,23 @@ const Timer = () => {
         <div className="timersection">
           <div>
             <p className="texttime">Hours</p>
-            <img src={upperpart} onClick={hrdeschandler} />
+            <img src={upperpart} onClick={hrdeschandler} alt="img data" />
             <p className="time">{hourtime}</p>
-            <img src={downpart} onClick={hrincehandler} />
+            <img src={downpart} onClick={hrincehandler} alt="img data" />
           </div>
           <p className="colon">:</p>
           <div>
             <p className="texttime">Minutes</p>
-            <img src={upperpart} onClick={mindeschandler} />
+            <img src={upperpart} onClick={mindeschandler} alt="img data" />
             <p className="time">{mintime}</p>
-            <img src={downpart} onClick={minincehandler} />
+            <img src={downpart} onClick={minincehandler} alt="img data" />
           </div>
           <p className="colon">:</p>
           <div>
             <p className="texttime">Seconds</p>
-            <img src={upperpart} onClick={secdeschandler} />
+            <img src={upperpart} onClick={secdeschandler} alt="img data" />
             <p className="time">{sectime}</p>
-            <img src={downpart} onClick={secincehandler} />
+            <img src={downpart} onClick={secincehandler} alt="img data" />
           </div>
         </div>
         {timerstate ? (

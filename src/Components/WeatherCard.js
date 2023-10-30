@@ -11,6 +11,7 @@ const WeatherCard = ({ weatherdata }) => {
           <img
             src={weatherdata.condition.icon}
             style={{ width: "75px", height: "75px" }}
+            alt="img data"
           />
           <p className="weatherpara">{weatherdata.condition.text}</p>
         </div>
@@ -20,7 +21,8 @@ const WeatherCard = ({ weatherdata }) => {
         <div className="weathercardcompo">
           <p className="degreepara">{weatherdata.temp_c} °C</p>
           <div className="pressurediv">
-            <img src={pressureimg} style={{ height: "25px" }} />
+            <img src={pressureimg} style={{ height: "25px" }} alt="img data" />
+
             <span className="pressurepara">
               {weatherdata.pressure_mb} mbar <br /> pressure
             </span>
@@ -31,13 +33,13 @@ const WeatherCard = ({ weatherdata }) => {
       {weatherdata && (
         <div className="weathercardcompo">
           <div className="winddiv">
-            <img src={windimg} style={{ height: "25px" }} />
+            <img src={windimg} style={{ height: "25px" }} alt="img data" />
             <span className="pressurepara">
               {weatherdata.wind_kph} km/h <br /> wind
             </span>
           </div>
           <div className="humiditydiv">
-            <img src={humidityimg} style={{ height: "25px" }} />
+            <img src={humidityimg} style={{ height: "25px" }} alt="img data" />
             <span className="pressurepara">
               {weatherdata.humidity} % <br /> Humidity
             </span>

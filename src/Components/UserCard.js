@@ -10,7 +10,7 @@ const UserCard = (props) => {
 
   return (
     <div className="UserDiv">
-      <img src={userimg} className="userimg" />
+      <img src={userimg} className="userimg" alt="img data" />
       <div className="UserInfoDiv">
         <div>
           <p className="UserInfoPara">{userarr.name}</p>
@@ -18,9 +18,6 @@ const UserCard = (props) => {
           <p className="UserNamePara">{userarr.username}</p>
         </div>
 
-        {/* {
-          usercategoryarr.length>4 ?className="UserCategoryDiv":className="UserCategoryDiv"
-        } */}
         <div
           className={usercategoryarr.length > 4 ? "another" : "UserCategoryDiv"}
         >

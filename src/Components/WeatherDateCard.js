@@ -22,7 +22,7 @@ const WeatherDateCard = () => {
   }
 
   function getCurrentDate() {
-    var ampm = hours >= 12 ? "pm" : "am";
+    //  var ampm = hours >= 12 ? "pm" : "am";
     let newDate = new Date();
     let day = newDate.getDate();
     let year = newDate.getFullYear();

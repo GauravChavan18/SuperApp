@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./NewsCard.css";
 const NewsCard = () => {
   const [randomnews, setrandomnews] = useState(0);
-  const [sdata, setdata] = useState([]);
+  const [sdata, setdata] = useState();
   const [dated, setdated] = useState([]);
   let url =
     "https://newsapi.org/v2/top-headlines?" +
@@ -10,7 +10,6 @@ const NewsCard = () => {
     "apiKey=c88136c8d6684baba4ff546228218d1b";
 
   function getCurrentDate() {
-    var ampm = hours >= 12 ? "pm" : "am";
     let newDate = new Date();
     let day = newDate.getDate();
     let year = newDate.getFullYear();
@@ -32,7 +31,7 @@ const NewsCard = () => {
       const response = await fetch(url);
       const data = await response.json();
       const articles = await data.articles;
-      setdata(...sdata, articles);
+      setdata(articles);
     } catch (error) {
       console.error(error);
     }
@@ -48,17 +47,19 @@ const NewsCard = () => {
   return (
     <div className="NewsCardDiv">
       <div className="image-div">
-        {sdata.length > 0 && (
-          <img className="image" src={sdata[randomnews].urlToImage} />
+        {sdata && (
+          <img
+            className="image"
+            src={sdata[randomnews].urlToImage}
+            alt="data"
+          />
         )}
         <div className="headlinediv">
-          {sdata.length > 0 && (
-            <p className="headlinepara">{sdata[randomnews].title}</p>
-          )}
+          {sdata && <p className="headlinepara">{sdata[randomnews].title}</p>}
           {<p className="datepara">{dated[0] + " | " + dated[1]}</p>}
         </div>
       </div>
-      {sdata.length > 0 && (
+      {sdata && (
         <p
           className="newspara"
           style={{ padding: "20px", textAlign: "justify", lineHeight: "1.6" }}
