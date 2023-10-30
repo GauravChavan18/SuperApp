@@ -74,7 +74,7 @@ const RegisterForm = () => {
       seterror(false);
 
       localStorage.setItem("user", JSON.stringify(formdata));
-      navigate("/categoryroute");
+      navigate("/categorypage");
       // console.log(formdata);
       formdata.name = "";
       formdata.username = "";

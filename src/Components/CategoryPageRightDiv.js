@@ -84,6 +84,7 @@ const CategoryPageRightDiv = (props) => {
               </p>
               <img
                 src={item.imgscr}
+                alt="data img"
                 style={{
                   width: "140px",
                   height: "80px",
