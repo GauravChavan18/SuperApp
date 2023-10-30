@@ -1,11 +1,8 @@
-// import logo from "./logo.svg";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-
-//import HomePage from "./Pages/HomePage";
 import Registration from "./Pages/Registration";
 import CategoryPage from "./Pages/CategoryPage";
-import HomePage from "./Pages/HomePage";
+import HomePage from "./Pages/Home";
 
 function App() {
   return (
