@@ -17,7 +17,7 @@ const CategoryPage = () => {
       if (Category.length > 0) {
         localStorage.setItem("usercategory", JSON.stringify(Category));
       }
-      navigate("/");
+      navigate("/homepage");
     }
   }
 

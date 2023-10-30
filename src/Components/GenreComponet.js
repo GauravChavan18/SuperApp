@@ -50,23 +50,23 @@ const GenreComponet = () => {
   console.log(genre);
 
   function findgenreid(item) {
-    if (item == "Action") {
+    if (item === "Action") {
       return 28;
-    } else if (item == "Drama") {
+    } else if (item === "Drama") {
       return 18;
-    } else if (item == "Romance") {
+    } else if (item === "Romance") {
       return 10749;
-    } else if (item == "Thriller") {
+    } else if (item === "Thriller") {
       return 53;
-    } else if (item == "Western") {
+    } else if (item === "Western") {
       return 37;
-    } else if (item == "Horror") {
+    } else if (item === "Horror") {
       return 27;
-    } else if (item == "Fantasy") {
+    } else if (item === "Fantasy") {
       return 14;
-    } else if (item == "Music") {
+    } else if (item === "Music") {
       return 10402;
-    } else if (item == "Fiction") {
+    } else if (item === "Fiction") {
       return 16;
     }
   }
@@ -76,34 +76,30 @@ const GenreComponet = () => {
     <div className="maindivgenre">
       <p className="heading">Entertainment according to your choice</p>
       <div style={{ height: "90%", overflowY: "scroll" }}>
-        {usercategoryarr.map(
-          (item) => (
-            (genre_id = findgenreid(item)),
-            (count = 0),
-            (
-              <div
-                style={{
-                  textAlign: "left",
-                }}
-              >
-                <p className="categoryName">{item}</p>
-                {genre.map((item) =>
-                  item.genre_ids.includes(genre_id) && count < 4
-                    ? (count++,
-                      (
-                        <img
-                          className="posterImg"
-                          src={
-                            "https://image.tmdb.org/t/p/w500" + item.poster_path
-                          }
-                        />
-                      ))
-                    : null
-                )}
-              </div>
-            )
-          )
-        )}
+        {usercategoryarr.map((item) => {
+          genre_id = findgenreid(item);
+          count = 0;
+
+          return (
+            <div style={{ textAlign: "left" }}>
+              <p className="categoryName">{item}</p>
+              {genre.map((item) =>
+                item.genre_ids.includes(genre_id) && count < 4
+                  ? (count++,
+                    (
+                      <img
+                        className="posterImg"
+                        src={
+                          "https://image.tmdb.org/t/p/w500" + item.poster_path
+                        }
+                        alt="img data"
+                      />
+                    ))
+                  : null
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
