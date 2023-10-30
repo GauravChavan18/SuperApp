@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          add changes
+          add changes to react web
         </a>
       </header>
     </div>
