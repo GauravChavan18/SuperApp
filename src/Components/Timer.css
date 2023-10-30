@@ -1,0 +1,71 @@
+.timerleftcard {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.texttime {
+  color: #949494;
+  font-family: Roboto;
+}
+
+.time {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 300;
+  font-family: Roboto;
+  margin: 0;
+}
+
+.timersection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  cursor: pointer;
+  margin: 4px;
+}
+
+.timerbtnstate {
+  width: 100%;
+  height: 30px;
+  background-color: #ff6a6a;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.colon {
+  color: white;
+  font-size: 40px;
+  padding-top: 35px;
+}
+
+.maindiv {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+
+.circletimerdiv {
+  background-color: rgb(24, 29, 55);
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+}

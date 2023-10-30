@@ -1,0 +1,55 @@
+.weathercardbody {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.weathercardcompo {
+  width: 33%;
+  height: 100%;
+}
+.weatherpara {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.degreepara {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+.pressurediv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.pressurepara {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: justify;
+  margin-left: 10px;
+}
+.winddiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.humiditydiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}

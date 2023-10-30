@@ -1,0 +1,36 @@
+.heading {
+  color: white;
+  text-align: left;
+  font-family: roboto;
+  font-size: 20px;
+  font-weight: 500;
+}
+.maindivgenre {
+  width: 70%;
+  height: 80%;
+  margin: auto;
+  z-index: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.posterImg {
+  height: 300px;
+  height: 200px;
+  margin-left: 40px;
+  border-radius: 5px;
+}
+
+.genrediv {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: antiquewhite;
+}
+
+.categoryName {
+  font-size: 20px;
+  color: #878787;
+  font-weight: 500;
+}
